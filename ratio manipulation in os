@@ -1,0 +1,27 @@
+#include <iostream>
+#include <ratio> // for ratio manipulation
+using namespace std;
+int main()
+{
+    // Declaring ratios
+    typedef ratio<5, 4> ratio1;
+    typedef ratio<3, 4> ratio2;
+ 
+    // Summing two ratios
+    typedef ratio_add<ratio1, ratio2> sum;
+ 
+    // Subtracting two ratios
+    typedef ratio_subtract<ratio1, ratio2> diff;
+ 
+    // printing sum of ratios
+    cout << "The sum of ratios is : ";
+    cout << sum::num << "/" << sum::den;
+    cout << endl;
+ 
+    // printing difference of ratios
+    cout << "The difference of ratios is : ";
+    cout << diff::num << "/" << diff::den;
+    cout << endl;
+ 
+    return 0;
+}
