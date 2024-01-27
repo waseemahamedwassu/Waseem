@@ -1,0 +1,24 @@
+from statistics import mean
+vote_list = []
+votes_numbers = []
+
+for i in range(5):
+    candidate = input("Enter the name of the candidate:")
+    vote_list.append(candidate)
+    number_votes = int(input('Enter the number of votes:'))
+    votes_numbers.append(number_votes)
+print(vote_list)
+print(votes_numbers)
+
+for x, y in zip(vote_list, votes_numbers):
+    print(x, y)
+
+
+total_votes = sum(votes_numbers)
+max_votes = max(votes_numbers)
+winner_index = votes_numbers.index(max_votes)
+winner_name = vote_list[winner_index]
+
+print(winner_name)
+print(mean(votes_numbers))
+print(max(votes_numbers))
