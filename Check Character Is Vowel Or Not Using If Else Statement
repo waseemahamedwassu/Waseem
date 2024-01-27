@@ -1,0 +1,22 @@
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+  //Ghanendra Yadav
+    char ch;
+    
+ cout << "Enter an Alphabet :\n";
+    cin >> ch;
+    
+    if(ch=='a'||ch=='A'||ch=='e'||ch=='E'||ch=='i'||ch=='I'||ch=='o'||ch=='O'||ch=='u'||ch=='U')
+  {
+        cout << ch << " Is A Vowel .\n";
+    }
+    else
+  {
+        cout << ch << " Is Not A Vowel.\n";
+    }
+   
+    return 0;
+}
