@@ -1,0 +1,63 @@
+#include<stdio.h>
+#include<string.h>
+#include<math.h>
+void main() {
+    /*C Program To Generate IP Addresses*/
+    int i, j, k, dig, no, nu, cnt = 0;
+    char str[] = {
+        '0',
+        '1',
+        '2',
+        '3',
+        '4',
+        '5',
+        '6',
+        '7',
+        '8',
+        '9',
+        'a',
+        'b',
+        'c',
+        'd',
+        'e',
+        'f'
+    };
+    char ch;
+
+    printf("\nEnter How Many IP Addresses You Want To Print: ");
+    scanf("%d", & no);
+
+    printf("\n\nEnter 4 for IPv4 and 6 for IPv6: \n");
+    scanf("%d", & nu);
+
+    switch (nu) {
+    case 4:
+        srand(time(NULL));
+        for (i = 0; i < no; i++) {
+            for (j = 0; j < 4; j++) {
+                cnt = rand() % 255;
+                printf("%d", cnt);
+                if (j < 3)
+                    printf(".");
+            }
+            printf("\n");
+        }
+        break;
+    case 6:
+        srand(time(NULL));
+        for (i = 0; i < no; i++) {
+            for (j = 0; j < 8; j++) {
+                for (k = 0; k < 4; k++) {
+                    ch = str[rand() % 16];
+                    printf("%c", ch);
+                }
+                if (j < 7)
+                    printf(".");
+            }
+            printf("\n");
+        }
+        break;
+    default:
+        printf("\nEnter IPv Either 4 or 6\n\n");
+    }
+}
